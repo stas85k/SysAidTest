@@ -40,6 +40,6 @@ public class LoginTest extends TestNgTestBase {
     Log.info("");
     loginPage.fillLogin(useranme,pass);
   //  Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
-   // Assert.assertTrue(loginPage.isRememberChecked(),"RememberMe checkbox is not checked");
+
   }
 }
