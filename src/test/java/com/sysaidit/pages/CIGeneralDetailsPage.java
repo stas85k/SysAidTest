@@ -1,5 +1,6 @@
 package com.sysaidit.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,9 @@ public class CIGeneralDetailsPage extends Page {
     public Map<String, String> data;
     public WebDriver driver;
     public int timeout = 15;
+
+    @FindBy(xpath = "//div[@class='UI_Form_BreadCrumbs_Label']/span")
+    WebElement uniqueNumber;
 
     @FindBy(css = "a[href='About.jsp?fancyBox=true']")
     WebElement about;
@@ -2685,7 +2689,23 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
         return this;
     }
 
-    public boolean checkUniquenumber() {
+    public boolean checkUniqueNumber() {
+        boolean isUniqueNumberElementPresent = this.verifyElementIsPresent(uniqueNumber);
+        if (!isUniqueNumberElementPresent) {
+            return  false;
+        }
+        String uniqueNumberText = uniqueNumber.getText();
+        if (!uniqueNumberText.contains("Incident #")) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean checkErrorMessage() {
+        Alert alert = driver.switchTo().alert();
+        if (alert == null){
+            return false;
+        }
         return true;
     }
 
