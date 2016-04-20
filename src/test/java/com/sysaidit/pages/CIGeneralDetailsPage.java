@@ -2679,4 +2679,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
         });
         return this;
     }
+
+    public CIGeneralDetailsPage fillGeneraldetails() {
+
+        return this;
+    }
 }
