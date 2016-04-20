@@ -1,13 +1,15 @@
 package com.sysaidit.pages;
-import java.util.List;
-import java.util.Map;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class IncidentListPage extends Page {
+import java.util.Map;
+
+public class CIGeneralDetailsPage extends Page {
     public Map<String, String> data;
     public WebDriver driver;
     public int timeout = 15;
@@ -127,7 +129,7 @@ public class IncidentListPage extends Page {
     WebElement contactSysaid;
 
     @FindBy(id = "lightboxAlertActionsButton")
-    WebElement continue;
+    WebElement continue1;
 
     @FindBy(css = "a[href='#/AssetManagementDash.jsp']")
     WebElement dashboard1;
@@ -446,10 +448,9 @@ public class IncidentListPage extends Page {
     @FindBy(css = "a[href='#/MonitorConfiguration.jsp']")
     WebElement workstations;
 
-    public IncidentListPage() {
-    }
 
-    public IncidentListPage(WebDriver driver) {
+
+    public CIGeneralDetailsPage(WebDriver driver) {
         
 super(driver);
         PageFactory.initElements(driver, this);
@@ -459,9 +460,9 @@ super(driver);
     /**
      * Click on About Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAboutLink() {
+    public CIGeneralDetailsPage clickAboutLink() {
        clickElement(about);
         return this;
     }
@@ -469,9 +470,9 @@ super(driver);
     /**
      * Click on Accessible Assets Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAccessibleAssetsLink() {
+    public CIGeneralDetailsPage clickAccessibleAssetsLink() {
        clickElement(accessibleAssets);
         return this;
     }
@@ -479,9 +480,9 @@ super(driver);
     /**
      * Click on Active Sessions Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickActiveSessionsLink() {
+    public CIGeneralDetailsPage clickActiveSessionsLink() {
        clickElement(activeSessions);
         return this;
     }
@@ -489,9 +490,9 @@ super(driver);
     /**
      * Click on Activities Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickActivities1Link() {
+    public CIGeneralDetailsPage clickActivities1Link() {
        clickElement(activities1);
         return this;
     }
@@ -499,9 +500,9 @@ super(driver);
     /**
      * Click on Activities Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickActivities2Link() {
+    public CIGeneralDetailsPage clickActivities2Link() {
        clickElement(activities2);
         return this;
     }
@@ -509,9 +510,9 @@ super(driver);
     /**
      * Click on Admin Portal Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAdminPortalLink() {
+    public CIGeneralDetailsPage clickAdminPortalLink() {
        clickElement(adminPortal);
         return this;
     }
@@ -519,9 +520,9 @@ super(driver);
     /**
      * Click on Administrator Sysaid Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAdministratorSysaidLink() {
+    public CIGeneralDetailsPage clickAdministratorSysaidLink() {
        clickElement(administratorSysaid);
         return this;
     }
@@ -529,9 +530,9 @@ super(driver);
     /**
      * Click on Administrators Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAdministratorsLink() {
+    public CIGeneralDetailsPage clickAdministratorsLink() {
        clickElement(administrators);
         return this;
     }
@@ -539,9 +540,9 @@ super(driver);
     /**
      * Click on Alerts Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAlertsLink() {
+    public CIGeneralDetailsPage clickAlertsLink() {
        clickElement(alerts);
         return this;
     }
@@ -549,9 +550,9 @@ super(driver);
     /**
      * Click on All Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAllLink() {
+    public CIGeneralDetailsPage clickAllLink() {
        clickElement(all);
         return this;
     }
@@ -559,9 +560,9 @@ super(driver);
     /**
      * Click on Analytics Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAnalyticsLink() {
+    public CIGeneralDetailsPage clickAnalyticsLink() {
        clickElement(analytics);
         return this;
     }
@@ -569,9 +570,9 @@ super(driver);
     /**
      * Click on Animated Summary Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAnimatedSummaryLink() {
+    public CIGeneralDetailsPage clickAnimatedSummaryLink() {
        clickElement(animatedSummary);
         return this;
     }
@@ -579,9 +580,9 @@ super(driver);
     /**
      * Click on Apply Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickApply1Button() {
+    public CIGeneralDetailsPage clickApply1Button() {
 clickElement(apply1);
         return this;
     }
@@ -589,9 +590,9 @@ clickElement(apply1);
     /**
      * Click on Apply Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickApply2Button() {
+    public CIGeneralDetailsPage clickApply2Button() {
 clickElement(apply2);
         return this;
     }
@@ -599,9 +600,9 @@ clickElement(apply2);
     /**
      * Click on Apply Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickApply3Button() {
+    public CIGeneralDetailsPage clickApply3Button() {
 clickElement(apply3);
         return this;
     }
@@ -609,9 +610,9 @@ clickElement(apply3);
     /**
      * Click on Apply Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickApply4Button() {
+    public CIGeneralDetailsPage clickApply4Button() {
 clickElement(apply4);
         return this;
     }
@@ -619,9 +620,9 @@ clickElement(apply4);
     /**
      * Click on Articles Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickArticlesLink() {
+    public CIGeneralDetailsPage clickArticlesLink() {
        clickElement(articles);
         return this;
     }
@@ -629,9 +630,9 @@ clickElement(apply4);
     /**
      * Click on Asset Availability Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAssetAvailabilityLink() {
+    public CIGeneralDetailsPage clickAssetAvailabilityLink() {
        clickElement(assetAvailability);
         return this;
     }
@@ -639,9 +640,9 @@ clickElement(apply4);
     /**
      * Click on Asset Groups Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAssetGroupsLink() {
+    public CIGeneralDetailsPage clickAssetGroupsLink() {
        clickElement(assetGroups);
         return this;
     }
@@ -649,9 +650,9 @@ clickElement(apply4);
     /**
      * Click on Asset List Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAssetListLink() {
+    public CIGeneralDetailsPage clickAssetListLink() {
        clickElement(assetList);
         return this;
     }
@@ -659,9 +660,9 @@ clickElement(apply4);
     /**
      * Click on Asset Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAssetSettingsLink() {
+    public CIGeneralDetailsPage clickAssetSettingsLink() {
        clickElement(assetSettings);
         return this;
     }
@@ -669,9 +670,9 @@ clickElement(apply4);
     /**
      * Click on Assets Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAssetsLink() {
+    public CIGeneralDetailsPage clickAssetsLink() {
        clickElement(assets);
         return this;
     }
@@ -679,9 +680,9 @@ clickElement(apply4);
     /**
      * Click on Audit Log Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAuditLogLink() {
+    public CIGeneralDetailsPage clickAuditLogLink() {
        clickElement(auditLog);
         return this;
     }
@@ -689,9 +690,9 @@ clickElement(apply4);
     /**
      * Click on Audit Logs Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickAuditLogsLink() {
+    public CIGeneralDetailsPage clickAuditLogsLink() {
        clickElement(auditLogs);
         return this;
     }
@@ -699,9 +700,9 @@ clickElement(apply4);
     /**
      * Click on Bi Analytics Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickBiAnalyticsLink() {
+    public CIGeneralDetailsPage clickBiAnalyticsLink() {
        clickElement(biAnalytics);
         return this;
     }
@@ -709,9 +710,9 @@ clickElement(apply4);
     /**
      * Click on Cancel Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCancel1Link() {
+    public CIGeneralDetailsPage clickCancel1Link() {
        clickElement(cancel1);
         return this;
     }
@@ -719,9 +720,9 @@ clickElement(apply4);
     /**
      * Click on Cancel Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCancel2Link() {
+    public CIGeneralDetailsPage clickCancel2Link() {
        clickElement(cancel2);
         return this;
     }
@@ -729,9 +730,9 @@ clickElement(apply4);
     /**
      * Click on Cancel Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCancel3Link() {
+    public CIGeneralDetailsPage clickCancel3Link() {
        clickElement(cancel3);
         return this;
     }
@@ -739,9 +740,9 @@ clickElement(apply4);
     /**
      * Click on Cancel Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCancel4Link() {
+    public CIGeneralDetailsPage clickCancel4Link() {
        clickElement(cancel4);
         return this;
     }
@@ -749,9 +750,9 @@ clickElement(apply4);
     /**
      * Click on Catalog Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCatalogLink() {
+    public CIGeneralDetailsPage clickCatalogLink() {
        clickElement(catalog);
         return this;
     }
@@ -759,9 +760,9 @@ clickElement(apply4);
     /**
      * Click on Changes Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickChangesLink() {
+    public CIGeneralDetailsPage clickChangesLink() {
        clickElement(changes);
         return this;
     }
@@ -769,9 +770,9 @@ clickElement(apply4);
     /**
      * Click on Chat Console Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickChatConsoleLink() {
+    public CIGeneralDetailsPage clickChatConsoleLink() {
        clickElement(chatConsole);
         return this;
     }
@@ -779,9 +780,9 @@ clickElement(apply4);
     /**
      * Click on Chat Sessions Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickChatSessionsLink() {
+    public CIGeneralDetailsPage clickChatSessionsLink() {
        clickElement(chatSessions);
         return this;
     }
@@ -789,9 +790,9 @@ clickElement(apply4);
     /**
      * Click on Ci List Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCiListLink() {
+    public CIGeneralDetailsPage clickCiListLink() {
        clickElement(ciList);
         return this;
     }
@@ -799,9 +800,9 @@ clickElement(apply4);
     /**
      * Click on Click Here For Full Comparison Matrix. Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickClickHereForFullComparisonMatrixLink() {
+    public CIGeneralDetailsPage clickClickHereForFullComparisonMatrixLink() {
        clickElement(clickHereForFullComparisonMatrix);
         return this;
     }
@@ -809,9 +810,9 @@ clickElement(apply4);
     /**
      * Click on Cmdb Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCmdbSettingsLink() {
+    public CIGeneralDetailsPage clickCmdbSettingsLink() {
        clickElement(cmdbSettings);
         return this;
     }
@@ -819,9 +820,9 @@ clickElement(apply4);
     /**
      * Click on Companies Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickCompaniesLink() {
+    public CIGeneralDetailsPage clickCompaniesLink() {
        clickElement(companies);
         return this;
     }
@@ -829,9 +830,9 @@ clickElement(apply4);
     /**
      * Click on Contact Sysaid Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickContactSysaidLink() {
+    public CIGeneralDetailsPage clickContactSysaidLink() {
        clickElement(contactSysaid);
         return this;
     }
@@ -839,19 +840,19 @@ clickElement(apply4);
     /**
      * Click on Continue Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickContinueButton() {
-clickElement(continue);
+    public CIGeneralDetailsPage clickContinueButton() {
+clickElement(continue1);
         return this;
     }
 
     /**
      * Click on Dashboard Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickDashboard1Link() {
+    public CIGeneralDetailsPage clickDashboard1Link() {
        clickElement(dashboard1);
         return this;
     }
@@ -859,9 +860,9 @@ clickElement(continue);
     /**
      * Click on Dashboard Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickDashboard2Link() {
+    public CIGeneralDetailsPage clickDashboard2Link() {
        clickElement(dashboard2);
         return this;
     }
@@ -869,9 +870,9 @@ clickElement(continue);
     /**
      * Click on End Users Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickEndUsersLink() {
+    public CIGeneralDetailsPage clickEndUsersLink() {
        clickElement(endUsers);
         return this;
     }
@@ -879,9 +880,9 @@ clickElement(continue);
     /**
      * Click on Enduser Portal Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickEnduserPortalLink() {
+    public CIGeneralDetailsPage clickEnduserPortalLink() {
        clickElement(enduserPortal);
         return this;
     }
@@ -889,9 +890,9 @@ clickElement(continue);
     /**
      * Click on Event Log Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickEventLogLink() {
+    public CIGeneralDetailsPage clickEventLogLink() {
        clickElement(eventLog);
         return this;
     }
@@ -899,9 +900,9 @@ clickElement(continue);
     /**
      * Click on Groups Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickGroupsLink() {
+    public CIGeneralDetailsPage clickGroupsLink() {
        clickElement(groups);
         return this;
     }
@@ -909,9 +910,9 @@ clickElement(continue);
     /**
      * Click on Help Desk Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickHelpDeskSettingsLink() {
+    public CIGeneralDetailsPage clickHelpDeskSettingsLink() {
        clickElement(helpDeskSettings);
         return this;
     }
@@ -919,9 +920,9 @@ clickElement(continue);
     /**
      * Click on Help Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickHelpLink() {
+    public CIGeneralDetailsPage clickHelpLink() {
        clickElement(help);
         return this;
     }
@@ -929,9 +930,9 @@ clickElement(continue);
     /**
      * Click on Incident 509 Default Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickIncident509DefaultLink() {
+    public CIGeneralDetailsPage clickIncident509DefaultLink() {
        clickElement(incident509Default);
         return this;
     }
@@ -939,9 +940,9 @@ clickElement(continue);
     /**
      * Click on Incidents Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickIncidentsLink() {
+    public CIGeneralDetailsPage clickIncidentsLink() {
        clickElement(incidents);
         return this;
     }
@@ -949,9 +950,9 @@ clickElement(continue);
     /**
      * Click on It Benchmark Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickItBenchmarkLink() {
+    public CIGeneralDetailsPage clickItBenchmarkLink() {
        clickElement(itBenchmark);
         return this;
     }
@@ -959,9 +960,9 @@ clickElement(continue);
     /**
      * Click on Last Poll Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickLastPollLink() {
+    public CIGeneralDetailsPage clickLastPollLink() {
        clickElement(lastPoll);
         return this;
     }
@@ -969,9 +970,9 @@ clickElement(continue);
     /**
      * Click on Logout Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickLogoutLink() {
+    public CIGeneralDetailsPage clickLogoutLink() {
        clickElement(logout);
         return this;
     }
@@ -979,9 +980,9 @@ clickElement(continue);
     /**
      * Click on Main Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMain1Link() {
+    public CIGeneralDetailsPage clickMain1Link() {
        clickElement(main1);
         return this;
     }
@@ -989,9 +990,9 @@ clickElement(continue);
     /**
      * Click on Main Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMain2Link() {
+    public CIGeneralDetailsPage clickMain2Link() {
        clickElement(main2);
         return this;
     }
@@ -999,9 +1000,9 @@ clickElement(continue);
     /**
      * Click on Matrix Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMatrixLink() {
+    public CIGeneralDetailsPage clickMatrixLink() {
        clickElement(matrix);
         return this;
     }
@@ -1009,9 +1010,9 @@ clickElement(continue);
     /**
      * Click on Monitoring Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMonitoringSettingsLink() {
+    public CIGeneralDetailsPage clickMonitoringSettingsLink() {
        clickElement(monitoringSettings);
         return this;
     }
@@ -1019,9 +1020,9 @@ clickElement(continue);
     /**
      * Click on My Calendar Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMyCalendarLink() {
+    public CIGeneralDetailsPage clickMyCalendarLink() {
        clickElement(myCalendar);
         return this;
     }
@@ -1029,9 +1030,9 @@ clickElement(continue);
     /**
      * Click on My Calendar Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMyCalendarSettingsLink() {
+    public CIGeneralDetailsPage clickMyCalendarSettingsLink() {
        clickElement(myCalendarSettings);
         return this;
     }
@@ -1039,9 +1040,9 @@ clickElement(continue);
     /**
      * Click on My Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickMySettingsLink() {
+    public CIGeneralDetailsPage clickMySettingsLink() {
        clickElement(mySettings);
         return this;
     }
@@ -1049,9 +1050,9 @@ clickElement(continue);
     /**
      * Click on Network Devices Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickNetworkDevicesLink() {
+    public CIGeneralDetailsPage clickNetworkDevicesLink() {
        clickElement(networkDevices);
         return this;
     }
@@ -1059,9 +1060,9 @@ clickElement(continue);
     /**
      * Click on New Incident Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickNewIncidentLink() {
+    public CIGeneralDetailsPage clickNewIncidentLink() {
        clickElement(newIncident);
         return this;
     }
@@ -1069,9 +1070,9 @@ clickElement(continue);
     /**
      * Click on Online Users Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickOnlineUsersLink() {
+    public CIGeneralDetailsPage clickOnlineUsersLink() {
        clickElement(onlineUsers);
         return this;
     }
@@ -1079,9 +1080,9 @@ clickElement(continue);
     /**
      * Click on Organize Favorites Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickOrganizeFavoritesLink() {
+    public CIGeneralDetailsPage clickOrganizeFavoritesLink() {
        clickElement(organizeFavorites);
         return this;
     }
@@ -1089,9 +1090,9 @@ clickElement(continue);
     /**
      * Click on Password Services Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickPasswordServicesSettingsLink() {
+    public CIGeneralDetailsPage clickPasswordServicesSettingsLink() {
        clickElement(passwordServicesSettings);
         return this;
     }
@@ -1099,9 +1100,9 @@ clickElement(continue);
     /**
      * Click on Patch Management Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickPatchManagementLink() {
+    public CIGeneralDetailsPage clickPatchManagementLink() {
        clickElement(patchManagement);
         return this;
     }
@@ -1109,9 +1110,9 @@ clickElement(continue);
     /**
      * Click on Phone Call Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickPhoneCallLink() {
+    public CIGeneralDetailsPage clickPhoneCallLink() {
        clickElement(phoneCall);
         return this;
     }
@@ -1119,9 +1120,9 @@ clickElement(continue);
     /**
      * Click on Problems Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickProblemsLink() {
+    public CIGeneralDetailsPage clickProblemsLink() {
        clickElement(problems);
         return this;
     }
@@ -1129,9 +1130,9 @@ clickElement(continue);
     /**
      * Click on Projects Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickProjectsLink() {
+    public CIGeneralDetailsPage clickProjectsLink() {
        clickElement(projects);
         return this;
     }
@@ -1139,9 +1140,9 @@ clickElement(continue);
     /**
      * Click on Registered Users Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickRegisteredUsersLink() {
+    public CIGeneralDetailsPage clickRegisteredUsersLink() {
        clickElement(registeredUsers);
         return this;
     }
@@ -1149,9 +1150,9 @@ clickElement(continue);
     /**
      * Click on Reportdashboard Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickReportdashboardSettingsLink() {
+    public CIGeneralDetailsPage clickReportdashboardSettingsLink() {
        clickElement(reportdashboardSettings);
         return this;
     }
@@ -1159,9 +1160,9 @@ clickElement(continue);
     /**
      * Click on Reports Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickReportsLink() {
+    public CIGeneralDetailsPage clickReportsLink() {
        clickElement(reports);
         return this;
     }
@@ -1169,9 +1170,9 @@ clickElement(continue);
     /**
      * Click on Requests Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickRequestsLink() {
+    public CIGeneralDetailsPage clickRequestsLink() {
        clickElement(requests);
         return this;
     }
@@ -1179,9 +1180,9 @@ clickElement(continue);
     /**
      * Click on Save Close Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSaveClose1Button() {
+    public CIGeneralDetailsPage clickSaveClose1Button() {
 clickElement(saveClose1);
         return this;
     }
@@ -1189,9 +1190,9 @@ clickElement(saveClose1);
     /**
      * Click on Save Close Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSaveClose2Button() {
+    public CIGeneralDetailsPage clickSaveClose2Button() {
 clickElement(saveClose2);
         return this;
     }
@@ -1199,9 +1200,9 @@ clickElement(saveClose2);
     /**
      * Click on Save Close Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSaveClose3Button() {
+    public CIGeneralDetailsPage clickSaveClose3Button() {
 clickElement(saveClose3);
         return this;
     }
@@ -1209,9 +1210,9 @@ clickElement(saveClose3);
     /**
      * Click on Save Close Button.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSaveClose4Button() {
+    public CIGeneralDetailsPage clickSaveClose4Button() {
 clickElement(saveClose4);
         return this;
     }
@@ -1219,9 +1220,9 @@ clickElement(saveClose4);
     /**
      * Click on Send Message Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSendMessageLink() {
+    public CIGeneralDetailsPage clickSendMessageLink() {
        clickElement(sendMessage);
         return this;
     }
@@ -1229,9 +1230,9 @@ clickElement(saveClose4);
     /**
      * Click on Servers Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServersLink() {
+    public CIGeneralDetailsPage clickServersLink() {
        clickElement(servers);
         return this;
     }
@@ -1239,9 +1240,9 @@ clickElement(saveClose4);
     /**
      * Click on Service Desk Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServiceDeskLink() {
+    public CIGeneralDetailsPage clickServiceDeskLink() {
        clickElement(serviceDesk);
         return this;
     }
@@ -1249,9 +1250,9 @@ clickElement(saveClose4);
     /**
      * Click on Service Management Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServiceManagementLink() {
+    public CIGeneralDetailsPage clickServiceManagementLink() {
        clickElement(serviceManagement);
         return this;
     }
@@ -1259,9 +1260,9 @@ clickElement(saveClose4);
     /**
      * Click on Service Record 509 Default Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServiceRecord509DefaultLink() {
+    public CIGeneralDetailsPage clickServiceRecord509DefaultLink() {
        clickElement(serviceRecord509Default);
         return this;
     }
@@ -1269,9 +1270,9 @@ clickElement(saveClose4);
     /**
      * Click on Service Record 511 Default Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServiceRecord511DefaultLink() {
+    public CIGeneralDetailsPage clickServiceRecord511DefaultLink() {
        clickElement(serviceRecord511Default);
         return this;
     }
@@ -1279,9 +1280,9 @@ clickElement(saveClose4);
     /**
      * Click on Service Record Actions Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickServiceRecordActionsLink() {
+    public CIGeneralDetailsPage clickServiceRecordActionsLink() {
        clickElement(serviceRecordActions);
         return this;
     }
@@ -1289,9 +1290,9 @@ clickElement(saveClose4);
     /**
      * Click on Slaslm Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSlaslmSettingsLink() {
+    public CIGeneralDetailsPage clickSlaslmSettingsLink() {
        clickElement(slaslmSettings);
         return this;
     }
@@ -1299,9 +1300,9 @@ clickElement(saveClose4);
     /**
      * Click on Software Products Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSoftwareProductsLink() {
+    public CIGeneralDetailsPage clickSoftwareProductsLink() {
        clickElement(softwareProducts);
         return this;
     }
@@ -1309,9 +1310,9 @@ clickElement(saveClose4);
     /**
      * Click on Supplier List Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSupplierListLink() {
+    public CIGeneralDetailsPage clickSupplierListLink() {
        clickElement(supplierList);
         return this;
     }
@@ -1319,9 +1320,9 @@ clickElement(saveClose4);
     /**
      * Click on Sysaid 9.1.1 Release Notes Here Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSysaid911ReleaseNotesHereLink() {
+    public CIGeneralDetailsPage clickSysaid911ReleaseNotesHereLink() {
        clickElement(sysaid911ReleaseNotesHere);
         return this;
     }
@@ -1329,9 +1330,9 @@ clickElement(saveClose4);
     /**
      * Click on Sysaid Community Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickSysaidCommunityLink() {
+    public CIGeneralDetailsPage clickSysaidCommunityLink() {
        clickElement(sysaidCommunity);
         return this;
     }
@@ -1339,9 +1340,9 @@ clickElement(saveClose4);
     /**
      * Click on Tasks Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickTasksLink() {
+    public CIGeneralDetailsPage clickTasksLink() {
        clickElement(tasks);
         return this;
     }
@@ -1349,9 +1350,9 @@ clickElement(saveClose4);
     /**
      * Click on Tasks Projects Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickTasksProjectsSettingsLink() {
+    public CIGeneralDetailsPage clickTasksProjectsSettingsLink() {
        clickElement(tasksProjectsSettings);
         return this;
     }
@@ -1359,9 +1360,9 @@ clickElement(saveClose4);
     /**
      * Click on Tools Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickToolsLink() {
+    public CIGeneralDetailsPage clickToolsLink() {
        clickElement(tools);
         return this;
     }
@@ -1369,9 +1370,9 @@ clickElement(saveClose4);
     /**
      * Click on User Management Settings Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickUserManagementSettingsLink() {
+    public CIGeneralDetailsPage clickUserManagementSettingsLink() {
        clickElement(userManagementSettings);
         return this;
     }
@@ -1379,9 +1380,9 @@ clickElement(saveClose4);
     /**
      * Click on Workstations Link.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage clickWorkstationsLink() {
+    public CIGeneralDetailsPage clickWorkstationsLink() {
        clickElement(workstations);
         return this;
     }
@@ -1389,9 +1390,9 @@ clickElement(saveClose4);
     /**
      * Fill every fields in the page.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage fill() {
+    public CIGeneralDetailsPage fill() {
         setPleaseSelectAMenuItemTo1CheckboxField();
         setPleaseSelectAMenuItemTo2CheckboxField();
         setPleaseSelectAMenuItemTo3CheckboxField();
@@ -1449,18 +1450,18 @@ clickElement(saveClose4);
     /**
      * Set default value to No Announcements For You Today Text field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setNoAnnouncementsForYouTodayTextField() {
+    public CIGeneralDetailsPage setNoAnnouncementsForYouTodayTextField() {
         return setNoAnnouncementsForYouTodayTextField(data.get("NO_ANNOUNCEMENTS_FOR_YOU_TODAY"));
     }
 
     /**
      * Set value to No Announcements For You Today Text field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setNoAnnouncementsForYouTodayTextField(String noAnnouncementsForYouTodayValue) {
+    public CIGeneralDetailsPage setNoAnnouncementsForYouTodayTextField(String noAnnouncementsForYouTodayValue) {
 setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
         return this;
     }
@@ -1468,9 +1469,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo10CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo10CheckboxField() {
         if (!pleaseSelectAMenuItemTo10.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo10);
         }
@@ -1480,9 +1481,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo11CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo11CheckboxField() {
         if (!pleaseSelectAMenuItemTo11.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo11);
         }
@@ -1492,9 +1493,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo12CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo12CheckboxField() {
         if (!pleaseSelectAMenuItemTo12.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo12);
         }
@@ -1504,9 +1505,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo13CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo13CheckboxField() {
         if (!pleaseSelectAMenuItemTo13.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo13);
         }
@@ -1516,9 +1517,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo14CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo14CheckboxField() {
         if (!pleaseSelectAMenuItemTo14.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo14);
         }
@@ -1528,9 +1529,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo15CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo15CheckboxField() {
         if (!pleaseSelectAMenuItemTo15.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo15);
         }
@@ -1540,9 +1541,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo16CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo16CheckboxField() {
         if (!pleaseSelectAMenuItemTo16.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo16);
         }
@@ -1552,9 +1553,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo17CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo17CheckboxField() {
         if (!pleaseSelectAMenuItemTo17.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo17);
         }
@@ -1564,9 +1565,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo18CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo18CheckboxField() {
         if (!pleaseSelectAMenuItemTo18.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo18);
         }
@@ -1576,9 +1577,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo19CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo19CheckboxField() {
         if (!pleaseSelectAMenuItemTo19.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo19);
         }
@@ -1588,9 +1589,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo1CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo1CheckboxField() {
         if (!pleaseSelectAMenuItemTo1.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo1);
         }
@@ -1600,9 +1601,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo20CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo20CheckboxField() {
         if (!pleaseSelectAMenuItemTo20.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo20);
         }
@@ -1612,9 +1613,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo21CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo21CheckboxField() {
         if (!pleaseSelectAMenuItemTo21.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo21);
         }
@@ -1624,9 +1625,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo22CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo22CheckboxField() {
         if (!pleaseSelectAMenuItemTo22.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo22);
         }
@@ -1636,9 +1637,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo23CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo23CheckboxField() {
         if (!pleaseSelectAMenuItemTo23.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo23);
         }
@@ -1648,9 +1649,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo24CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo24CheckboxField() {
         if (!pleaseSelectAMenuItemTo24.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo24);
         }
@@ -1660,9 +1661,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo25CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo25CheckboxField() {
         if (!pleaseSelectAMenuItemTo25.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo25);
         }
@@ -1672,9 +1673,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo26CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo26CheckboxField() {
         if (!pleaseSelectAMenuItemTo26.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo26);
         }
@@ -1684,9 +1685,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo27CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo27CheckboxField() {
         if (!pleaseSelectAMenuItemTo27.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo27);
         }
@@ -1696,9 +1697,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo28CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo28CheckboxField() {
         if (!pleaseSelectAMenuItemTo28.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo28);
         }
@@ -1708,9 +1709,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo29CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo29CheckboxField() {
         if (!pleaseSelectAMenuItemTo29.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo29);
         }
@@ -1720,9 +1721,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo2CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo2CheckboxField() {
         if (!pleaseSelectAMenuItemTo2.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo2);
         }
@@ -1732,9 +1733,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo30CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo30CheckboxField() {
         if (!pleaseSelectAMenuItemTo30.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo30);
         }
@@ -1744,9 +1745,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo31CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo31CheckboxField() {
         if (!pleaseSelectAMenuItemTo31.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo31);
         }
@@ -1756,9 +1757,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo32CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo32CheckboxField() {
         if (!pleaseSelectAMenuItemTo32.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo32);
         }
@@ -1768,9 +1769,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo33CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo33CheckboxField() {
         if (!pleaseSelectAMenuItemTo33.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo33);
         }
@@ -1780,9 +1781,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo34CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo34CheckboxField() {
         if (!pleaseSelectAMenuItemTo34.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo34);
         }
@@ -1792,9 +1793,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo35CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo35CheckboxField() {
         if (!pleaseSelectAMenuItemTo35.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo35);
         }
@@ -1804,9 +1805,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo36CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo36CheckboxField() {
         if (!pleaseSelectAMenuItemTo36.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo36);
         }
@@ -1816,9 +1817,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo37CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo37CheckboxField() {
         if (!pleaseSelectAMenuItemTo37.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo37);
         }
@@ -1828,9 +1829,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo38CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo38CheckboxField() {
         if (!pleaseSelectAMenuItemTo38.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo38);
         }
@@ -1840,9 +1841,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo39CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo39CheckboxField() {
         if (!pleaseSelectAMenuItemTo39.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo39);
         }
@@ -1852,9 +1853,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo3CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo3CheckboxField() {
         if (!pleaseSelectAMenuItemTo3.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo3);
         }
@@ -1864,9 +1865,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo40CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo40CheckboxField() {
         if (!pleaseSelectAMenuItemTo40.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo40);
         }
@@ -1876,9 +1877,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo41CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo41CheckboxField() {
         if (!pleaseSelectAMenuItemTo41.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo41);
         }
@@ -1888,9 +1889,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo42CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo42CheckboxField() {
         if (!pleaseSelectAMenuItemTo42.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo42);
         }
@@ -1900,9 +1901,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo43CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo43CheckboxField() {
         if (!pleaseSelectAMenuItemTo43.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo43);
         }
@@ -1912,9 +1913,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo44CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo44CheckboxField() {
         if (!pleaseSelectAMenuItemTo44.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo44);
         }
@@ -1924,9 +1925,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo45CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo45CheckboxField() {
         if (!pleaseSelectAMenuItemTo45.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo45);
         }
@@ -1936,9 +1937,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo46CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo46CheckboxField() {
         if (!pleaseSelectAMenuItemTo46.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo46);
         }
@@ -1948,9 +1949,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo47CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo47CheckboxField() {
         if (!pleaseSelectAMenuItemTo47.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo47);
         }
@@ -1960,9 +1961,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo48CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo48CheckboxField() {
         if (!pleaseSelectAMenuItemTo48.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo48);
         }
@@ -1972,9 +1973,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo49CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo49CheckboxField() {
         if (!pleaseSelectAMenuItemTo49.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo49);
         }
@@ -1984,9 +1985,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo4CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo4CheckboxField() {
         if (!pleaseSelectAMenuItemTo4.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo4);
         }
@@ -1996,9 +1997,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo50CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo50CheckboxField() {
         if (!pleaseSelectAMenuItemTo50.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo50);
         }
@@ -2008,9 +2009,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo5CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo5CheckboxField() {
         if (!pleaseSelectAMenuItemTo5.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo5);
         }
@@ -2020,9 +2021,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo6CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo6CheckboxField() {
         if (!pleaseSelectAMenuItemTo6.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo6);
         }
@@ -2032,9 +2033,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo7CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo7CheckboxField() {
         if (!pleaseSelectAMenuItemTo7.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo7);
         }
@@ -2044,9 +2045,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo8CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo8CheckboxField() {
         if (!pleaseSelectAMenuItemTo8.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo8);
         }
@@ -2056,9 +2057,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Set Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage setPleaseSelectAMenuItemTo9CheckboxField() {
+    public CIGeneralDetailsPage setPleaseSelectAMenuItemTo9CheckboxField() {
         if (!pleaseSelectAMenuItemTo9.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo9);
         }
@@ -2068,9 +2069,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo10CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo10CheckboxField() {
         if (pleaseSelectAMenuItemTo10.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo10);
         }
@@ -2080,9 +2081,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo11CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo11CheckboxField() {
         if (pleaseSelectAMenuItemTo11.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo11);
         }
@@ -2092,9 +2093,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo12CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo12CheckboxField() {
         if (pleaseSelectAMenuItemTo12.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo12);
         }
@@ -2104,9 +2105,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo13CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo13CheckboxField() {
         if (pleaseSelectAMenuItemTo13.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo13);
         }
@@ -2116,9 +2117,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo14CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo14CheckboxField() {
         if (pleaseSelectAMenuItemTo14.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo14);
         }
@@ -2128,9 +2129,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo15CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo15CheckboxField() {
         if (pleaseSelectAMenuItemTo15.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo15);
         }
@@ -2140,9 +2141,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo16CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo16CheckboxField() {
         if (pleaseSelectAMenuItemTo16.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo16);
         }
@@ -2152,9 +2153,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo17CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo17CheckboxField() {
         if (pleaseSelectAMenuItemTo17.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo17);
         }
@@ -2164,9 +2165,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo18CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo18CheckboxField() {
         if (pleaseSelectAMenuItemTo18.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo18);
         }
@@ -2176,9 +2177,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo19CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo19CheckboxField() {
         if (pleaseSelectAMenuItemTo19.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo19);
         }
@@ -2188,9 +2189,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo1CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo1CheckboxField() {
         if (pleaseSelectAMenuItemTo1.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo1);
         }
@@ -2200,9 +2201,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo20CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo20CheckboxField() {
         if (pleaseSelectAMenuItemTo20.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo20);
         }
@@ -2212,9 +2213,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo21CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo21CheckboxField() {
         if (pleaseSelectAMenuItemTo21.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo21);
         }
@@ -2224,9 +2225,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo22CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo22CheckboxField() {
         if (pleaseSelectAMenuItemTo22.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo22);
         }
@@ -2236,9 +2237,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo23CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo23CheckboxField() {
         if (pleaseSelectAMenuItemTo23.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo23);
         }
@@ -2248,9 +2249,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo24CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo24CheckboxField() {
         if (pleaseSelectAMenuItemTo24.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo24);
         }
@@ -2260,9 +2261,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo25CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo25CheckboxField() {
         if (pleaseSelectAMenuItemTo25.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo25);
         }
@@ -2272,9 +2273,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo26CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo26CheckboxField() {
         if (pleaseSelectAMenuItemTo26.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo26);
         }
@@ -2284,9 +2285,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo27CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo27CheckboxField() {
         if (pleaseSelectAMenuItemTo27.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo27);
         }
@@ -2296,9 +2297,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo28CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo28CheckboxField() {
         if (pleaseSelectAMenuItemTo28.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo28);
         }
@@ -2308,9 +2309,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo29CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo29CheckboxField() {
         if (pleaseSelectAMenuItemTo29.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo29);
         }
@@ -2320,9 +2321,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo2CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo2CheckboxField() {
         if (pleaseSelectAMenuItemTo2.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo2);
         }
@@ -2332,9 +2333,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo30CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo30CheckboxField() {
         if (pleaseSelectAMenuItemTo30.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo30);
         }
@@ -2344,9 +2345,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo31CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo31CheckboxField() {
         if (pleaseSelectAMenuItemTo31.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo31);
         }
@@ -2356,9 +2357,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo32CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo32CheckboxField() {
         if (pleaseSelectAMenuItemTo32.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo32);
         }
@@ -2368,9 +2369,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo33CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo33CheckboxField() {
         if (pleaseSelectAMenuItemTo33.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo33);
         }
@@ -2380,9 +2381,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo34CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo34CheckboxField() {
         if (pleaseSelectAMenuItemTo34.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo34);
         }
@@ -2392,9 +2393,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo35CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo35CheckboxField() {
         if (pleaseSelectAMenuItemTo35.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo35);
         }
@@ -2404,9 +2405,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo36CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo36CheckboxField() {
         if (pleaseSelectAMenuItemTo36.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo36);
         }
@@ -2416,9 +2417,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo37CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo37CheckboxField() {
         if (pleaseSelectAMenuItemTo37.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo37);
         }
@@ -2428,9 +2429,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo38CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo38CheckboxField() {
         if (pleaseSelectAMenuItemTo38.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo38);
         }
@@ -2440,9 +2441,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo39CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo39CheckboxField() {
         if (pleaseSelectAMenuItemTo39.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo39);
         }
@@ -2452,9 +2453,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo3CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo3CheckboxField() {
         if (pleaseSelectAMenuItemTo3.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo3);
         }
@@ -2464,9 +2465,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo40CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo40CheckboxField() {
         if (pleaseSelectAMenuItemTo40.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo40);
         }
@@ -2476,9 +2477,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo41CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo41CheckboxField() {
         if (pleaseSelectAMenuItemTo41.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo41);
         }
@@ -2488,9 +2489,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo42CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo42CheckboxField() {
         if (pleaseSelectAMenuItemTo42.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo42);
         }
@@ -2500,9 +2501,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo43CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo43CheckboxField() {
         if (pleaseSelectAMenuItemTo43.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo43);
         }
@@ -2512,9 +2513,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo44CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo44CheckboxField() {
         if (pleaseSelectAMenuItemTo44.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo44);
         }
@@ -2524,9 +2525,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo45CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo45CheckboxField() {
         if (pleaseSelectAMenuItemTo45.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo45);
         }
@@ -2536,9 +2537,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo46CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo46CheckboxField() {
         if (pleaseSelectAMenuItemTo46.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo46);
         }
@@ -2548,9 +2549,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo47CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo47CheckboxField() {
         if (pleaseSelectAMenuItemTo47.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo47);
         }
@@ -2560,9 +2561,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo48CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo48CheckboxField() {
         if (pleaseSelectAMenuItemTo48.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo48);
         }
@@ -2572,9 +2573,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo49CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo49CheckboxField() {
         if (pleaseSelectAMenuItemTo49.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo49);
         }
@@ -2584,9 +2585,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo4CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo4CheckboxField() {
         if (pleaseSelectAMenuItemTo4.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo4);
         }
@@ -2596,9 +2597,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo50CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo50CheckboxField() {
         if (pleaseSelectAMenuItemTo50.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo50);
         }
@@ -2608,9 +2609,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo5CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo5CheckboxField() {
         if (pleaseSelectAMenuItemTo5.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo5);
         }
@@ -2620,9 +2621,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo6CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo6CheckboxField() {
         if (pleaseSelectAMenuItemTo6.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo6);
         }
@@ -2632,9 +2633,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo7CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo7CheckboxField() {
         if (pleaseSelectAMenuItemTo7.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo7);
         }
@@ -2644,9 +2645,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo8CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo8CheckboxField() {
         if (pleaseSelectAMenuItemTo8.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo8);
         }
@@ -2656,9 +2657,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Unset Please Select A Menu Item To Edit Display Properties Checkbox field.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage unsetPleaseSelectAMenuItemTo9CheckboxField() {
+    public CIGeneralDetailsPage unsetPleaseSelectAMenuItemTo9CheckboxField() {
         if (pleaseSelectAMenuItemTo9.isSelected()) {
              clickElement(pleaseSelectAMenuItemTo9);
         }
@@ -2668,9 +2669,9 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
     /**
      * Verify that the page loaded completely.
      *
-     * @return the IncidentListPage class instance.
+     * @return the CIGeneralDetailsPage class instance.
      */
-    public IncidentListPage verifyPageLoaded() {
+    public CIGeneralDetailsPage verifyPageLoaded() {
         (new WebDriverWait(driver, timeout)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getPageSource().contains(pageLoadedText);
