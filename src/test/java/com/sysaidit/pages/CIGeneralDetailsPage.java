@@ -2684,4 +2684,12 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
 
         return this;
     }
+
+    public boolean checkUniquenumber() {
+        return true;
+    }
+
+    public CIGeneralDetailsPage fillActivities() {
+        return this;
+    }
 }

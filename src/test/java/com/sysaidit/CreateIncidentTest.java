@@ -36,8 +36,8 @@ public class CreateIncidentTest extends TestNgTestBase {
   public void createIncident () {
     driver.get("https://automationstas.qa.sysaidit.com/#/HelpDesk.jsp?fromId=IncidentsList");
     ciGeneralDetailsPage.fillGeneraldetails();
+    ciGeneralDetailsPage.fillActivities();
+    Assert.assertTrue(ciGeneralDetailsPage.checkUniquenumber(),"No error message appears");
 
-    Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
-    Assert.assertTrue(loginPage.isRememberChecked(),"RememberMe checkbox is not checked");
   }
 }
