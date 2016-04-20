@@ -40,7 +40,7 @@ public class LoginTest extends TestNgTestBase {
   public void loginPositive (String useranme, String pass) {
     Log.info("");
     loginPage.fillLogin(useranme,pass);
-  //  Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
+
 
   }
 }
