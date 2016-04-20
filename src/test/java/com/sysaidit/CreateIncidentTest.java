@@ -37,6 +37,7 @@ public class CreateIncidentTest extends TestNgTestBase {
         driver.get("https://automationstas.qa.sysaidit.com/#/HelpDesk.jsp?fromId=IncidentsList");
         ciGeneralDetailsPage.fillGeneraldetails();
         ciGeneralDetailsPage.fillActivities();
+
         Assert.assertTrue(ciGeneralDetailsPage.checkUniqueNumber(),"No unique number appears");
     }
 

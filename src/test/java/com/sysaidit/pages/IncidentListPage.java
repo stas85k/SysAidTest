@@ -14,6 +14,9 @@ public class IncidentListPage extends Page {
     public WebDriver driver;
     public int timeout = 15;
 
+
+
+
     @FindBy(css = "a[href='About.jsp?fancyBox=true']")
     WebElement about;
 
@@ -449,6 +452,37 @@ public class IncidentListPage extends Page {
     WebElement workstations;
 
 
+    /*******************************************/
+   // @FindBy(xpath = "//*[@class='drop service-desk']")
+    @FindBy(xpath = "//*[@id='topstrip']/div[2]/ul/li[1]/span/a[1]")
+    WebElement ServiceDeskDrop;
+
+    @FindBy(xpath = "//*[@class='truncate'][contains(text(),'Incidents')]")
+    WebElement IncidentsButton;
+
+    @FindBy(xpath = "")
+    WebElement IconsAddNewIncedent;
+
+
+
+    //click buttons
+    public IncidentListPage ClickServiceDeskDrop( ) {
+        clickElement(ServiceDeskDrop);
+        return this;
+    }
+    public IncidentListPage ClickIncidentsButton( ) {
+        clickElement(IncidentsButton);
+        return this;
+    }
+
+
+
+    public void waitForServiceDeskDrop()   {
+        waitUntilIsLoaded(ServiceDeskDrop);
+    }
+
+
+    /********************************************************/
 
     public IncidentListPage(WebDriver driver) {
         

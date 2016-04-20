@@ -112,6 +112,12 @@ super(driver);
         return this;
     }
 
+    public LoginPage fillPositiveLogin () {
+        setUserNameTextField("qatest");
+        setPassword1CheckboxField("xvqkd1");
+        clickToLogin();
+        return this;
+    }
 
 
     /**

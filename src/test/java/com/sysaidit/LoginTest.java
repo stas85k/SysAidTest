@@ -1,6 +1,7 @@
 package com.sysaidit;
 
 import com.sysaidit.pages.HomePage;
+import com.sysaidit.pages.IncidentListPage;
 import com.sysaidit.pages.LoginPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +13,7 @@ public class LoginTest extends TestNgTestBase {
 
   private HomePage homepage;
   private LoginPage loginPage;
+  private IncidentListPage incidentListPage;
   private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
   @BeforeClass
@@ -38,9 +40,19 @@ public class LoginTest extends TestNgTestBase {
 
   @Test(dataProviderClass = DataProviders.class, dataProvider = "loadPositiveLoginFromFile")
   public void loginPositive (String useranme, String pass) {
-    Log.info("");
-    loginPage.fillLogin(useranme,pass);
+    //  Log.info("");
+    loginPage.fillLogin(useranme, pass);
+    incidentListPage.waitForServiceDeskDrop();
+    //   incidentListPage.ClickServiceDeskDrop();
+  }
 
+
+    @Test
+    public void loginPositive1 () {
+      //  Log.info("");
+      loginPage.fillPositiveLogin();
+      incidentListPage.waitForServiceDeskDrop();
+      incidentListPage.ClickServiceDeskDrop();
 
   }
 }
