@@ -3,6 +3,7 @@ package com.sysaidit;
 import com.sysaidit.pages.CIGeneralDetailsPage;
 import com.sysaidit.pages.LoginPage;
 import com.sysaidit.pages.MainPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -14,6 +15,7 @@ public class CreateIncidentTest extends TestNgTestBase {
   private LoginPage loginPage;
   private MainPage mainPage;
   private CIGeneralDetailsPage ciGeneralDetailsPage;
+  private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
   @BeforeClass
   public void testInit() {
