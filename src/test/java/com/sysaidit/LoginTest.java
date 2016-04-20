@@ -29,9 +29,10 @@ public class LoginTest extends TestNgTestBase {
 
   @Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
   public void loginNegative (String useranme, String pass) {
-    Log.info("");
+    Log.info("Logging in");
     loginPage.fillLogin(useranme,pass);
     Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
+    Log.info("Assert on error message passed");
     Assert.assertTrue(loginPage.isRememberChecked(),"RememberMe checkbox is not checked");
   }
 
