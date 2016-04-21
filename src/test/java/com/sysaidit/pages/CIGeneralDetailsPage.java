@@ -966,6 +966,41 @@ public class CIGeneralDetailsPage extends Page {
     }
 
 
+    public CIGeneralDetailsPage addNote(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setStatusTextField(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setUrgencyTextField(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setImpactTextField(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setPriorityTextField(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setAssignedToTextField(String s) {
+        return this;
+
+    }
+
+    public CIGeneralDetailsPage setRequestUserTextField(String s) {
+        return this;
+
+    }
+
     public boolean checkUniqueNumber() {
         boolean isUniqueNumberElementPresent = this.verifyElementIsPresent(uniqueNumber);
         if (!isUniqueNumberElementPresent) {
