@@ -2709,7 +2709,7 @@ setElementText ( noAnnouncementsForYouToday,noAnnouncementsForYouTodayValue);
         return true;
     }
 
-    public CIGeneralDetailsPage fillActivities() {
+    /*public CIGeneralDetailsPage fillActivities() {
         return this;
-    }
+    }*/
 }

@@ -1,8 +1,4 @@
-/*
-All the code that follow is
-Copyright (c) 2016, Iakov Volf. All Rights Reserved.
-Not for reuse without permission.
-*/
+
 
 package com.sysaidit.pages;
 

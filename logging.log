@@ -11,3 +11,11 @@
 2016-04-20 23:37:34 INFO  LogLog4j:35 - Assert on error message passed
 2016-04-20 23:39:55 INFO  LogLog4j:43 - 
 2016-04-20 23:52:58 INFO  LogLog4j:43 - 
+2016-04-21 10:30:06 INFO  LogLog4j:34 - Logging in
+2016-04-21 10:30:07 INFO  LogLog4j:37 - Assert on error message passed
+2016-04-21 10:30:07 INFO  LogLog4j:34 - Logging in
+2016-04-21 10:30:08 INFO  LogLog4j:37 - Assert on error message passed
+2016-04-21 10:44:17 INFO  LogLog4j:34 - Logging in
+2016-04-21 10:44:18 INFO  LogLog4j:37 - Assert on error message passed
+2016-04-21 10:44:18 INFO  LogLog4j:34 - Logging in
+2016-04-21 10:44:19 INFO  LogLog4j:37 - Assert on error message passed
