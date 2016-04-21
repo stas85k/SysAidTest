@@ -28,6 +28,10 @@ public class CIActivitiesPage extends Page {
     public WebElement addButton;
 
 
+
+
+
+
     public CIActivitiesPage(WebDriver driver) {
 
         super(driver);
