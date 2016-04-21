@@ -1,6 +1,5 @@
 package com.sysaidit;
 
-import com.sysaidit.pages.HomePage;
 import com.sysaidit.pages.IncidentListPage;
 import com.sysaidit.pages.LoginPage;
 import org.apache.log4j.Logger;
@@ -11,7 +10,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends TestNgTestBase {
 
-  private HomePage homepage;
   private LoginPage loginPage;
   private IncidentListPage incidentListPage;
   private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
@@ -19,41 +17,29 @@ public class LoginTest extends TestNgTestBase {
   @BeforeClass
   public void testInit() {
     driver.get(baseUrl);
-    homepage = PageFactory.initElements(driver, HomePage.class);
     loginPage = PageFactory.initElements(driver, LoginPage.class);
+    incidentListPage = PageFactory.initElements(driver, IncidentListPage.class);
   }
 
-  //@Test
-  public void testHomePageHasAHeader() {
-    Assert.assertFalse("".equals(homepage.header.getText()));
-  }
 
 
   @Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
   public void loginNegative (String useranme, String pass) {
-    Log.info("Logging in");
+    Log.info("Logging in negative");
     loginPage.fillLogin(useranme,pass);
     Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
     Log.info("Assert on error message passed");
     Assert.assertTrue(loginPage.isRememberChecked(),"RememberMe checkbox is not checked");
   }
 
-  @Test(dataProviderClass = DataProviders.class, dataProvider = "loadPositiveLoginFromFile")
-  public void loginPositive (String useranme, String pass) {
-    //  Log.info("");
-    loginPage.fillLogin(useranme, pass);
+  @Test
+  public void loginPositive () {
+    Log.info("fill Login with positive data");
+    loginPage.fillLogin("qatest", "xvqkd1");
     incidentListPage.waitForServiceDeskDrop();
-    ///Assert.assertTrue((),
-    //   incidentListPage.ClickServiceDeskDrop();
-  }
-
-
-    @Test
-    public void loginPositive1 () {
-      //  Log.info("");
-      loginPage.fillPositiveLogin();
-      incidentListPage.waitForServiceDeskDrop();
-      incidentListPage.ClickServiceDeskDrop();
+    Assert.assertTrue(loginPage.verifyUserNameAfterLogin());
+    Log.info("Assert on username passed");
 
   }
+
 }

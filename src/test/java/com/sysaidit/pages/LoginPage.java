@@ -50,6 +50,9 @@ public class LoginPage extends Page {
     @FindBy(xpath = "//table[@class='Button3Parts']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//*[@id='user-links']/li[2]/span")
+    public WebElement userNameInPage;
+
 
     public LoginPage(WebDriver driver) {
         
@@ -195,6 +198,10 @@ setElementText ( userName,userNameValue);
 
         return rememberCheckbox.isSelected();
 
+    }
+
+    public boolean verifyUserNameAfterLogin (){
+        return verifyTextBoolean(userNameInPage,"Stas Kuznetsov");
     }
 
     public boolean checkErrorMessage (){

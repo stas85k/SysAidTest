@@ -1,5 +1,7 @@
 package com.sysaidit.pages;
 
+import com.sysaidit.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,12 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Map;
 
 public class CIGeneralDetailsPage extends Page {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public Map<String, String> data;
     public WebDriver driver;
     public int timeout = 15;
 
 
-    @FindBy(id = "problem_type")
+    @FindBy(xpath = "//*[@id='41_problem_type']/div/input")
     public WebElement category;
 
     @FindBy(id = "subcategory")
@@ -124,25 +127,30 @@ public class CIGeneralDetailsPage extends Page {
         return this;
     }
 
-
+//todo correct others element the same way - first click and then add value
     public CIGeneralDetailsPage setCategoryTextField(String categoryValue) {
+        Log.info("set Category Text Field with " +categoryValue);
+        clickElement(category);
         setElementText(category, categoryValue);
         return this;
     }
 
     public CIGeneralDetailsPage setSubCategoryTextField(String subCategoryValue) {
+        Log.info("set sub Category Text Field with " +subCategoryValue);
         setElementText(subCategory, subCategoryValue);
         return this;
     }
 
 
     public CIGeneralDetailsPage setThirdCategoryTextField(String thirdCategoryValue) {
+        Log.info("set third  Category Text Field with " +thirdCategoryValue);
         setElementText(thirdCategory, thirdCategoryValue);
         return this;
     }
 
 
     public CIGeneralDetailsPage setTitleTextField(String titleValue) {
+        Log.info("set Title  Text Field with " +titleValue);
         setElementText(title, titleValue);
         return this;
     }
@@ -215,6 +223,10 @@ public class CIGeneralDetailsPage extends Page {
         return true;
     }
 
+    public CIGeneralDetailsPage waitForPageLoad (){
+        waitUntilIsLoaded(category);
+        return this;
+    }
     /*public CIGeneralDetailsPage fillActivities() {
         return this;
     }*/

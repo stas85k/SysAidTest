@@ -137,7 +137,7 @@ public abstract class Page {
 
 
   public boolean verifyTextBoolean(WebElement element, String text) {
-    //   Log.info("verifying that text from element " + element + " - ('" + element.getText() + "') - is equal to text '" + text + "'");
+    // Log.info("verifying that text from element " + element + " - ('" + element.getText() + "') - is equal to text '" + text + "'");
     return text.equals(element.getText());
   }
 
