@@ -27,7 +27,8 @@ public class CIActivitiesPage extends Page {
     @FindBy(id = "sract_OKBtn")
     public WebElement addButton;
 
-
+    @FindBy(xpath = "//*[@id='tabs']/ul/li[3]")
+    public WebElement activitiesTab;
 
 
 
@@ -45,12 +46,18 @@ public class CIActivitiesPage extends Page {
         return this;
     }
 
+    public CIActivitiesPage clickToActivityTab() {
+        activitiesTab.click();
+        return this;
+    }
+
     /**
      * Fill every fields in the page.
      *
      * @return the LoginPage class instance.
      */
     public CIActivitiesPage fillActivities(String fromtimed, String fromtimet, String totimed, String totimet) {
+        clickToActivityTab();
         setFromTimeDateTextField(fromtimed);
         setToTimeDateTextField(totimed);
         setFromTimeTimeTextField(fromtimet);
