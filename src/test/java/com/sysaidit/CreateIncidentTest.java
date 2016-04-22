@@ -31,7 +31,7 @@ public class CreateIncidentTest extends TestNgTestBase {
     @BeforeMethod
     public void setUp (){
         driver.get(baseUrl);
-        loginPage.fillLogin("qatest", "xvqkd1");
+        loginPage.fillLogin("qatest", "gh8mlz");
         mainPage.waitForService();
     }
 

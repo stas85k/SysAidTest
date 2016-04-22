@@ -33,10 +33,10 @@ driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  /*@AfterSuite(alwaysRun = true)
+  @AfterSuite(alwaysRun = true)
   public void tearDown() {
     if (driver != null) {
       driver.quit();
     }
-  }*/
+  }
 }
