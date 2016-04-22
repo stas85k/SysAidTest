@@ -92,3 +92,19 @@
 2016-04-22 15:45:52 INFO  LogLog4j:32 - Assert on error message passed
 2016-04-22 15:45:52 INFO  LogLog4j:38 - fill Login with positive data
 2016-04-22 15:46:05 INFO  LogLog4j:42 - Assert on username passed
+2016-04-22 19:18:53 INFO  LogLog4j:29 - Logging in negative
+2016-04-22 19:18:54 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-22 19:18:54 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-22 19:19:08 INFO  LogLog4j:42 - Assert on username passed
+2016-04-22 19:20:33 INFO  LogLog4j:132 - set Category Text Field with 1
+2016-04-22 19:22:32 INFO  LogLog4j:29 - Logging in negative
+2016-04-22 19:22:33 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-22 19:22:34 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-22 19:22:48 INFO  LogLog4j:42 - Assert on username passed
+2016-04-22 19:24:14 INFO  LogLog4j:132 - set Category Text Field with 1
+2016-04-22 20:09:59 INFO  LogLog4j:132 - set Category Text Field with 1
+2016-04-22 20:29:00 INFO  LogLog4j:29 - Logging in negative
+2016-04-22 20:29:01 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-22 20:29:02 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-22 20:29:26 INFO  LogLog4j:42 - Assert on username passed
+2016-04-22 20:30:58 INFO  LogLog4j:132 - set Category Text Field with 1

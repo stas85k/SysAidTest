@@ -19,10 +19,10 @@ public class CIGeneralDetailsPage extends Page {
     public int timeout = 15;
 
 
-    @FindBy(xpath = "//*[@id='37_problem_type']/div/input")
+    @FindBy(xpath = "//td[3]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/span")
     public WebElement category;
 
-    @FindBy(xpath = "//*[@id='37_subcategory']/div/div[1]/span")
+    @FindBy(xpath = "//td[2]/div/div/div/span")
     public WebElement subCategory;
 
     @FindBy(id = "thirdLevelCategory")
@@ -56,8 +56,6 @@ public class CIGeneralDetailsPage extends Page {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-
-
 
 
 
