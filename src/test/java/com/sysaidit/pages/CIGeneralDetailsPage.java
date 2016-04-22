@@ -19,10 +19,10 @@ public class CIGeneralDetailsPage extends Page {
     public int timeout = 15;
 
 
-    @FindBy(xpath = "//*[@id='41_problem_type']/div/input")
+    @FindBy(xpath = "//*[@id='37_problem_type']/div/input")
     public WebElement category;
 
-    @FindBy(id = "subcategory")
+    @FindBy(xpath = "//*[@id='37_subcategory']/div/div[1]/span")
     public WebElement subCategory;
 
     @FindBy(id = "thirdLevelCategory")
@@ -137,6 +137,7 @@ public class CIGeneralDetailsPage extends Page {
 
     public CIGeneralDetailsPage setSubCategoryTextField(String subCategoryValue) {
         Log.info("set sub Category Text Field with " +subCategoryValue);
+        clickElement(subCategory);
         setElementText(subCategory, subCategoryValue);
         return this;
     }

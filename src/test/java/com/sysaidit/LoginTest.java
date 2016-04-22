@@ -5,6 +5,7 @@ import com.sysaidit.pages.LoginPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -42,4 +43,10 @@ public class LoginTest extends TestNgTestBase {
 
   }
 
+  @AfterTest(alwaysRun = true)
+  public void tearDown() {
+    if (driver != null) {
+      driver.quit();
+    }
+  }
 }
