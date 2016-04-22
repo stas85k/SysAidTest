@@ -1,5 +1,4 @@
 
-
 package com.sysaidit.pages;
 
 import org.openqa.selenium.WebDriver;
@@ -16,33 +15,17 @@ public class LoginPage extends Page {
     public WebDriver driver;
     public int timeout = 15;
 
-    @FindBy(css = "a[href='http://www.sysaid.com']")
-
-    public WebElement bySysaid;
-
-    @FindBy(css = "a[href='ForgotPassword.jsp?accountid=automationstas']")
-
-    public WebElement forgotYourPassword;
-
-    @FindBy(css = "a[href='EndUserPortal.jsp']")
-
-    public WebElement loginAsGuest;
-
     public final String pageLoadedText = "";
-
     public final String pageUrl = "/Login.jsp";
 
-    @FindBy(name = "password")
+    @FindBy(name = "userName")
+    public WebElement userName;
 
-    public WebElement password1;
+    @FindBy(name = "password")
+    public WebElement password;
 
     @FindBy(name = "rememberMeForDisplay")
-
     public WebElement rememberCheckbox;
-
-    @FindBy(name = "userName")
-
-    public WebElement userName;
 
     @FindBy(id = "error_message")
     public WebElement errorMessage;
@@ -55,93 +38,31 @@ public class LoginPage extends Page {
 
 
     public LoginPage(WebDriver driver) {
-        
-super(driver);
-       // this.PAGE_URL = getCurrentUrl();
+
+        super(driver);
+        // this.PAGE_URL = getCurrentUrl();
         PageFactory.initElements(driver, this);
         this.timeout = timeout;
     }
 
 
-
-
-    /**
-     * Click on By Sysaid Link.
-     *
-     * @return the LoginPage class instance.
-     */
-    public LoginPage clickBySysaidLink() {
-        bySysaid.click();
-        return this;
-    }
-
     public LoginPage clickToLogin() {
         loginButton.click();
         return this;
     }
-    /**
-     * Click on Forgot Your Password Link.
-     *
-     * @return the LoginPage class instance.
-     */
-    public LoginPage clickForgotYourPasswordLink() {
-        forgotYourPassword.click();
-        return this;
-    }
 
-    /**
-     * Click on Login As Guest Link.
-     *
-     * @return the LoginPage class instance.
-     */
-    public LoginPage clickLoginAsGuestLink() {
-        loginAsGuest.click();
-        return this;
-    }
 
     /**
      * Fill every fields in the page.
      *
      * @return the LoginPage class instance.
      */
-    public LoginPage fillLogin (String username, String pass) {
+    public LoginPage fillLogin(String username, String pass) {
         setUserNameTextField(username);
-        setPassword1CheckboxField(pass);
+        setPasswordField(pass);
         clickToLogin();
         return this;
     }
-
-    public LoginPage fillPositiveLogin () {
-        setUserNameTextField("qatest");
-        setPassword1CheckboxField("xvqkd1");
-        clickToLogin();
-        return this;
-    }
-
-
-    /**
-     * Set Password Checkbox field.
-     *
-     * @return the LoginPage class instance.
-     */
-    public LoginPage setPassword1CheckboxField(String passwordValue) {
-setElementText ( password1,passwordValue);
-        return this;
-    }
-
-    /**
-     * Set Password Checkbox field.
-     *
-     * @return the LoginPage class instance.
-     */
-    public LoginPage setPassword2CheckboxField() {
-        if (!rememberCheckbox.isSelected()) {
-            //rememberCheckbox.click();
-             clickElement(rememberCheckbox);
-        }
-        return this;
-    }
-
 
     /**
      * Set value to User Name Text field.
@@ -149,20 +70,17 @@ setElementText ( password1,passwordValue);
      * @return the LoginPage class instance.
      */
     public LoginPage setUserNameTextField(String userNameValue) {
-setElementText ( userName,userNameValue);
+        setElementText(userName, userNameValue);
         return this;
     }
 
     /**
-     * Unset Password Checkbox field.
+     * Set value to Password field.
      *
      * @return the LoginPage class instance.
      */
-    public LoginPage unsetPassword2CheckboxField() {
-        if (rememberCheckbox.isSelected()) {
-            //rememberCheckbox.click();
-             clickElement(rememberCheckbox);
-        }
+    public LoginPage setPasswordField(String passwordValue) {
+        setElementText(password, passwordValue);
         return this;
     }
 
@@ -200,11 +118,11 @@ setElementText ( userName,userNameValue);
 
     }
 
-    public boolean verifyUserNameAfterLogin (){
-        return verifyTextBoolean(userNameInPage,"Stas Kuznetsov");
+    public boolean verifyUserNameAfterLogin() {
+        return verifyTextBoolean(userNameInPage, "Stas Kuznetsov");
     }
 
-    public boolean checkErrorMessage (){
+    public boolean checkErrorMessage() {
         waitUntilIsLoaded(errorMessage);
         return exists(errorMessage);
     }

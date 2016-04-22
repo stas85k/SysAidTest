@@ -83,7 +83,7 @@ public class CIActivitiesPage extends Page {
     }
 
     private CIActivitiesPage setFromTimeTimeTextField(String toTimeTValue) {
-        setElementText(fromTimeT, toTimeTValue);
+        setElementText(toTimeT, toTimeTValue);
         return this;
     }
 

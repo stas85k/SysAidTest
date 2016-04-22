@@ -33,21 +33,24 @@ public class CITempTest extends TestNgTestBase {
   }
 
   @Test
-  public void createIncedentTst() {
+  public void createIncedentTst() throws InterruptedException {
     driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
-    ciGeneralDetailsPage.waitForPageLoad();
+    //ciGeneralDetailsPage.waitForPageLoad();
 
+
+    driver.findElement(By.id("title")).click();
     driver.findElement(By.id("title")).clear();
     driver.findElement(By.id("title")).sendKeys("default title");
 
-    driver.findElement(By.xpath("//div[@id='37_problem_type']/div/div/span")).click();
+    driver.findElement(By.xpath("//div[@id='17_problem_type']/div/div/span")).click();
+    driver.findElement(By.xpath("(//input[@value=''])[25]")).clear();
+    driver.findElement(By.xpath("(//input[@value=''])[25]")).sendKeys("1");
+    driver.findElement(By.xpath("//div[@id='17_subcategory']/div/div/span")).click();
+    driver.findElement(By.xpath("(//input[@value=''])[26]")).clear();
+    driver.findElement(By.xpath("(//input[@value=''])[26]")).sendKeys("2");
+    driver.findElement(By.xpath("//div[@id='17_thirdLevelCategory']/div/div/span")).click();
+    driver.findElement(By.xpath("(//input[@value=''])[27]")).clear();
+    driver.findElement(By.xpath("(//input[@value=''])[27]")).sendKeys("3");
 
-    driver.findElement(By.xpath("//div[@id='addScroll_problem_type_CustomSelect']/ul/li[2]")).click();
-    driver.findElement(By.xpath("//div[@id='37_subcategory']/div/div/span")).click();
-    driver.findElement(By.xpath("//div[@id='addScroll_subcategory_CustomSelect']/ul/li[2]")).click();
-    driver.findElement(By.xpath("//div[@id='37_thirdLevelCategory']/div/div/span")).click();
-    driver.findElement(By.xpath("//div[@id='addScroll_thirdLevelCategory_CustomSelect']/ul/li[2]")).click();
-    driver.findElement(By.id("title")).clear();
-    driver.findElement(By.id("title")).sendKeys("default title");
   }
 }
