@@ -32,7 +32,7 @@ public class CreateIncidentTest extends TestNgTestBase {
     public void setUp (){
         driver.get(baseUrl);
         loginPage.fillLogin("qatest", "gh8mlz");
-        mainPage.waitForService();
+        //mainPage.waitForService();
     }
 
 
@@ -40,14 +40,14 @@ public class CreateIncidentTest extends TestNgTestBase {
     public void createIncident () {
        // driver.get("https://automationstas.qa.sysaidit.com/#/HelpDesk.jsp?fromId=IncidentsList");
         driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
-        ciGeneralDetailsPage.waitForPageLoad();
+        //ciGeneralDetailsPage.waitForPageLoad();
         ciGeneralDetailsPage.fillGeneraldetails();
         ciActivitiesPage.fillActivities("18-04-2016","18:00","18-04-2016","18:15");
 
         Assert.assertTrue(ciGeneralDetailsPage.checkUniqueNumber(),"No unique number appears");
     }
 
-    @Test
+    //@Test
     public void createIncidentWithoutSomeMandatoryFields(){
         driver.get("https://automationstas.qa.sysaidit.com/#/HelpDesk.jsp?fromId=IncidentsList");
         //TODO implement the following method (while some of the mandatory fields are not filled)

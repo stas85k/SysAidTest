@@ -36,7 +36,7 @@ public class LoginTest extends TestNgTestBase {
   @Test
   public void loginPositive () {
     Log.info("fill Login with positive data");
-      loginPage.fillLogin("qatest", "gh8mlz");
+      loginPage.fillLogin("sysaid", "ymRZSPQV");
     incidentListPage.waitForServiceDeskDrop();
     Assert.assertTrue(loginPage.verifyUserNameAfterLogin());
     Log.info("Assert on username passed");

@@ -21,8 +21,6 @@ public class CITempTest extends TestNgTestBase {
     loginPage = PageFactory.initElements(driver, LoginPage.class);
     mainPage = PageFactory.initElements(driver, MainPage.class);
     ciGeneralDetailsPage = PageFactory.initElements(driver, CIGeneralDetailsPage.class);
-
-
   }
 
   @BeforeMethod
@@ -34,23 +32,25 @@ public class CITempTest extends TestNgTestBase {
 
   @Test
   public void createIncedentTst() throws InterruptedException {
-    driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
-    //ciGeneralDetailsPage.waitForPageLoad();
+    driver.get("http://inetex.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
+    ciGeneralDetailsPage.waitForPageLoad();
 
 
-    driver.findElement(By.id("title")).click();
-    driver.findElement(By.id("title")).clear();
-    driver.findElement(By.id("title")).sendKeys("default title");
+    driver.findElement(By.xpath("//div[@id='65_problem_type']/div/div/span")).click();
 
-    driver.findElement(By.xpath("//div[@id='17_problem_type']/div/div/span")).click();
-    driver.findElement(By.xpath("(//input[@value=''])[25]")).clear();
-    driver.findElement(By.xpath("(//input[@value=''])[25]")).sendKeys("1");
-    driver.findElement(By.xpath("//div[@id='17_subcategory']/div/div/span")).click();
-    driver.findElement(By.xpath("(//input[@value=''])[26]")).clear();
-    driver.findElement(By.xpath("(//input[@value=''])[26]")).sendKeys("2");
-    driver.findElement(By.xpath("//div[@id='17_thirdLevelCategory']/div/div/span")).click();
-    driver.findElement(By.xpath("(//input[@value=''])[27]")).clear();
-    driver.findElement(By.xpath("(//input[@value=''])[27]")).sendKeys("3");
+    //By.xpath(".//*[text()='Первая ссылка']/.."));
+
+    driver.findElement(By.xpath("//div[@id='addScroll_problem_type_CustomSelect']/ul/li[3]")).click();
+    driver.findElement(By.xpath("//div[@id='65_subcategory']/div/div/span")).click();
+    driver.findElement(By.xpath("//div[@id='addScroll_subcategory_CustomSelect']/ul/li[3]")).click();
+    driver.findElement(By.xpath("//div[@id='65_thirdLevelCategory']/div/div/span")).click();
+    driver.findElement(By.xpath("//div[@id='addScroll_thirdLevelCategory_CustomSelect']/ul/li[4]")).click();
+    driver.findElement(By.id("desc")).clear();
+    driver.findElement(By.id("desc")).sendKeys("desc");
+    driver.findElement(By.xpath("//div[@id='65_requestUser']/div/div")).click();
+    driver.findElement(By.xpath("//div[@id='addScroll_requestUser_CustomSelect']/ul/li[3]")).click();
+    driver.findElement(By.xpath("//table[@id='OKBtn']/tbody/tr/td[2]/span")).click();
+
 
   }
 }

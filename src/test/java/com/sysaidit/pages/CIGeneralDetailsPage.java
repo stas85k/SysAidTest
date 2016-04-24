@@ -19,8 +19,12 @@ public class CIGeneralDetailsPage extends Page {
     public int timeout = 15;
 
 
-    @FindBy(xpath = "//td[3]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/span")
+    @FindBy(xpath = "//*[@id*='problem_type']")
     public WebElement category;
+
+    @FindBy(xpath = "//*[@id*='problem_type']/div/input")
+    public WebElement categoryInp;
+
 
     @FindBy(xpath = "//td[2]/div/div/div/span")
     public WebElement subCategory;
@@ -57,39 +61,6 @@ public class CIGeneralDetailsPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-
-
-
-
-    /**
-     * Fill every fields in the page.
-     *
-     * @return the CIGeneralDetailsPage class instance.
-     */
-    public CIGeneralDetailsPage fill() {
-
-        setNoAnnouncementsForYouTodayTextField();
-        return this;
-    }
-
-    /**
-     * Set default value to No Announcements For You Today Text field.
-     *
-     * @return the CIGeneralDetailsPage class instance.
-     */
-    public CIGeneralDetailsPage setNoAnnouncementsForYouTodayTextField() {
-        return setNoAnnouncementsForYouTodayTextField(data.get("NO_ANNOUNCEMENTS_FOR_YOU_TODAY"));
-    }
-
-    /**
-     * Set value to No Announcements For You Today Text field.
-     *
-     * @return the CIGeneralDetailsPage class instance.
-     */
-    public CIGeneralDetailsPage setNoAnnouncementsForYouTodayTextField(String noAnnouncementsForYouTodayValue) {
-        setElementText(noAnnouncementsForYouToday, noAnnouncementsForYouTodayValue);
-        return this;
-    }
 
 
     /**
@@ -129,7 +100,7 @@ public class CIGeneralDetailsPage extends Page {
     public CIGeneralDetailsPage setCategoryTextField(String categoryValue) {
         Log.info("set Category Text Field with " +categoryValue);
         clickElement(category);
-        setElementText(category, categoryValue);
+        setElementText(categoryInp, categoryValue);
         return this;
     }
 
