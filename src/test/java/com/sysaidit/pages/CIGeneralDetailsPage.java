@@ -19,30 +19,28 @@ public class CIGeneralDetailsPage extends Page {
     public int timeout = 15;
 
 
-    @FindBy(xpath = "//*[@id*='problem_type']")
-    public WebElement category;
+    @FindBy(xpath = "//*[contains(@id,'problem_type')]/div/div[1]/span")
+    WebElement category;
 
-    @FindBy(xpath = "//*[@id*='problem_type']/div/input")
-    public WebElement categoryInp;
+    @FindBy(xpath = "//*[@id='addScroll_problem_type_CustomSelect']/ul/li[2]")
+    WebElement categoryChs;
 
 
     @FindBy(xpath = "//td[2]/div/div/div/span")
-    public WebElement subCategory;
+    WebElement subCategory;
 
     @FindBy(id = "thirdLevelCategory")
-    public WebElement thirdCategory;
+    WebElement thirdCategory;
 
     @FindBy(id = "title")
-    public WebElement title;
+    WebElement title;
 
     @FindBy(id = "desc")
-    public WebElement description;
+    WebElement description;
 
 
     @FindBy(id = "ApplyBtn")
-    public WebElement applyButton;
-
-
+    WebElement applyButton;
 
 
     @FindBy(xpath = "//div[@class='UI_Form_BreadCrumbs_Label']/span")
@@ -62,7 +60,6 @@ public class CIGeneralDetailsPage extends Page {
     }
 
 
-
     /**
      * Verify that the page loaded completely.
      *
@@ -78,8 +75,9 @@ public class CIGeneralDetailsPage extends Page {
     }
 
     public CIGeneralDetailsPage fillGeneraldetails() {
-        setCategoryTextField("1");
-        setSubCategoryTextField("2");
+
+        chsCategoryTextField();
+        /*setSubCategoryTextField("2");
         setThirdCategoryTextField("3");
         setTitleTextField("new title");
         setDescriptionTextField("new Description");
@@ -91,21 +89,22 @@ public class CIGeneralDetailsPage extends Page {
         setRequestUserTextField("User");
         setAssignedToTextField("SysAid Admin");
 
-        clickToApplyButton();
+        clickToApplyButton();*/
 
         return this;
     }
 
-//todo correct others element the same way - first click and then add value
-    public CIGeneralDetailsPage setCategoryTextField(String categoryValue) {
-        Log.info("set Category Text Field with " +categoryValue);
+
+    //todo correct others element the same way - first click and then add value
+    public CIGeneralDetailsPage chsCategoryTextField() {
+        Log.info("set Category Text Field with ");
         clickElement(category);
-        setElementText(categoryInp, categoryValue);
+        clickElement(categoryChs);
         return this;
     }
 
     public CIGeneralDetailsPage setSubCategoryTextField(String subCategoryValue) {
-        Log.info("set sub Category Text Field with " +subCategoryValue);
+        Log.info("set sub Category Text Field with " + subCategoryValue);
         clickElement(subCategory);
         setElementText(subCategory, subCategoryValue);
         return this;
@@ -113,14 +112,14 @@ public class CIGeneralDetailsPage extends Page {
 
 
     public CIGeneralDetailsPage setThirdCategoryTextField(String thirdCategoryValue) {
-        Log.info("set third  Category Text Field with " +thirdCategoryValue);
+        Log.info("set third  Category Text Field with " + thirdCategoryValue);
         setElementText(thirdCategory, thirdCategoryValue);
         return this;
     }
 
 
     public CIGeneralDetailsPage setTitleTextField(String titleValue) {
-        Log.info("set Title  Text Field with " +titleValue);
+        Log.info("set Title  Text Field with " + titleValue);
         setElementText(title, titleValue);
         return this;
     }
@@ -168,10 +167,13 @@ public class CIGeneralDetailsPage extends Page {
     }
 
 
+
+
     public CIGeneralDetailsPage clickToApplyButton() {
         applyButton.click();
         return this;
     }
+
 
     public boolean checkUniqueNumber() {
         boolean isUniqueNumberElementPresent = this.verifyElementIsPresent(uniqueNumber);
@@ -193,7 +195,7 @@ public class CIGeneralDetailsPage extends Page {
         return true;
     }
 
-    public CIGeneralDetailsPage waitForPageLoad (){
+    public CIGeneralDetailsPage waitForPageLoad() {
         waitUntilIsLoaded(category);
         return this;
     }
