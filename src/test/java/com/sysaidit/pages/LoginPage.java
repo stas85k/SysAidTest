@@ -119,7 +119,7 @@ public class LoginPage extends Page {
     }
 
     public boolean verifyUserNameAfterLogin() {
-        return verifyTextBoolean(userNameInPage, "sysaid admin");
+        return verifyTextBoolean(userNameInPage, "Stas Kuznetsov");
     }
 
     public boolean checkErrorMessage() {

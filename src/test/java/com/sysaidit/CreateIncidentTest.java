@@ -31,7 +31,7 @@ public class CreateIncidentTest extends TestNgTestBase {
     @BeforeMethod
     public void setUp (){
         driver.get(baseUrl);
-        loginPage.fillLogin("sysaid","ymRZSPQV");
+        loginPage.fillLogin("qatest","gh8mlz");
         mainPage.waitForService();
     }
 
@@ -39,7 +39,7 @@ public class CreateIncidentTest extends TestNgTestBase {
     @Test
     public void createIncident () {
        // driver.get("https://automationstas.qa.sysaidit.com/#/HelpDesk.jsp?fromId=IncidentsList");
-        driver.get("https://inetex.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
+        driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
         ciGeneralDetailsPage.waitForPageLoad();
         ciGeneralDetailsPage.fillGeneraldetails();
         ciActivitiesPage.fillActivities("18-04-2016","18:00","18-04-2016","18:15");

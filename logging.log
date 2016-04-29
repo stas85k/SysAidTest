@@ -250,3 +250,42 @@
 2016-04-29 09:37:47 INFO  LogLog4j:29 - Logging in negative
 2016-04-29 09:37:48 INFO  LogLog4j:32 - Assert on error message passed
 2016-04-29 09:37:48 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:28:58 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:28:59 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:28:59 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:29:36 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:29:37 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:29:37 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:30:00 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:30:02 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:30:02 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:40:53 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:40:54 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:40:54 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:43:29 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:43:30 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:43:30 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:45:13 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:45:14 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:45:14 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 10:46:34 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 10:46:35 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 10:46:35 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:04:08 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 11:04:09 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 11:04:09 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:05:30 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 11:05:32 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 11:05:32 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:06:10 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 11:06:11 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 11:06:11 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:06:28 INFO  LogLog4j:42 - Assert on username passed
+2016-04-29 11:09:31 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 11:09:32 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 11:09:32 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:09:49 INFO  LogLog4j:42 - Assert on username passed
+2016-04-29 11:15:12 INFO  LogLog4j:29 - Logging in negative
+2016-04-29 11:15:13 INFO  LogLog4j:32 - Assert on error message passed
+2016-04-29 11:15:13 INFO  LogLog4j:38 - fill Login with positive data
+2016-04-29 11:15:31 INFO  LogLog4j:42 - Assert on username passed
