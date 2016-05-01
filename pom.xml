@@ -1,4 +1,3 @@
-<!--
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -103,9 +102,9 @@
       </plugin>
     </plugins>
   </build>
-  &lt;!&ndash; profiles &ndash;&gt;
+  <!-- profiles -->
   <profiles>
-    &lt;!&ndash; browsers &ndash;&gt;
+    <!-- browsers -->
     <profile>
       <id>firefox</id>
       <properties>
@@ -165,7 +164,7 @@
         <browser.platform></browser.platform>
       </properties>
     </profile>
-    &lt;!&ndash; environments &ndash;&gt;
+    <!-- environments -->
     <profile>
       <id>local</id>
       <properties>
@@ -197,7 +196,7 @@
         <site.url>http://prodhost.com/</site.url>
       </properties>
     </profile>
-    &lt;!&ndash; grid &ndash;&gt;
+    <!-- grid -->
     <profile>
       <id>grid</id>
       <properties>
@@ -207,4 +206,3 @@
     </profile>
   </profiles>
 </project>
--->

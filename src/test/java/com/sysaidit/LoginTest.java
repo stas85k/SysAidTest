@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoginTest extends TestNgTestBase {
+public class LoginTest1 extends TestNgTestBase {
 
   private LoginPage loginPage;
   private IncidentListPage incidentListPage;
