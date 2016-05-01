@@ -34,7 +34,7 @@ driver = new FirefoxDriver();
   }
 
   @AfterSuite(alwaysRun = true)
-  public void tearDown() {
+  public void tearDown() throws Exception {
     if (driver != null) {
       driver.quit();
     }

@@ -3,11 +3,13 @@ package com.sysaidit.pages;
 import com.sysaidit.LogLog4j;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Map;
@@ -19,10 +21,10 @@ public class CIGeneralDetailsPage extends Page {
     public int timeout = 15;
 
 
-    @FindBy(xpath = "//*[contains(@id,'problem_type')]/div/div[1]/span")
+    @FindBy(xpath = "//div[contains(@id,'problem_type')]/div/div[1]")
     WebElement category;
 
-    @FindBy(xpath = "//*[@id='addScroll_problem_type_CustomSelect']/ul/li[2]")
+    @FindBy(xpath = "//div[@id='addScroll_problem_type_CustomSelect']/ul/li[2]")
     WebElement categoryChs;
 
 
@@ -76,7 +78,8 @@ public class CIGeneralDetailsPage extends Page {
 
     public CIGeneralDetailsPage fillGeneraldetails() {
 
-        chsCategoryTextField();
+        new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Error message in Outlook/Excel/Word/Powerpoint");
+        setCategoryTextField();
         /*setSubCategoryTextField("2");
         setThirdCategoryTextField("3");
         setTitleTextField("new title");
@@ -96,9 +99,11 @@ public class CIGeneralDetailsPage extends Page {
 
 
     //todo correct others element the same way - first click and then add value
-    public CIGeneralDetailsPage chsCategoryTextField() {
+    public CIGeneralDetailsPage setCategoryTextField() {
         Log.info("set Category Text Field with ");
+        waitUntilIsLoaded(category);
         clickElement(category);
+        //waitUntilIsLoaded(categoryChs);
         clickElement(categoryChs);
         return this;
     }

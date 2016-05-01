@@ -4,7 +4,7 @@
   <test name="Test1">
     <classes>
       <class name="com.sysaidit.LoginTest"/>
-      <!--<class name="com.sysaidit.CreateIncidentTest"/>-->
+      <class name="com.sysaidit.CreateIncidentTest"/>
     </classes>
   </test>  
 </suite>
