@@ -28,7 +28,7 @@ public class LoginTest extends TestNgTestBase {
   public void loginNegative (String useranme, String pass) {
     Log.info("Logging in negative");
     loginPage.fillLogin(useranme,pass);
-    .Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
+    Assert.assertTrue(loginPage.checkErrorMessage(),"No error message appears");
     Log.info("Assert on error message passed");
     Assert.assertTrue(loginPage.isRememberChecked(),"RememberMe checkbox is not checked");
   }
