@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoginTest1 extends TestNgTestBase {
+public class LoginTest extends TestNgTestBase {
 
   private LoginPage loginPage;
   private IncidentListPage incidentListPage;
@@ -24,7 +24,7 @@ public class LoginTest1 extends TestNgTestBase {
 
 
 
-  @Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
+  //@Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
   public void loginNegative (String useranme, String pass) {
     Log.info("Logging in negative");
     loginPage.fillLogin(useranme,pass);
