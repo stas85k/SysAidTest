@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestNgTestBase {
@@ -15,7 +14,7 @@ public class LoginTest extends TestNgTestBase {
   private IncidentListPage incidentListPage;
   private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
-  @BeforeClass
+  //@BeforeClass
   public void testInit() {
     driver.get(baseUrl);
     loginPage = PageFactory.initElements(driver, LoginPage.class);
