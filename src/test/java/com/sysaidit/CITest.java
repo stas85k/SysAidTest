@@ -56,7 +56,7 @@ public class CITest extends TestNgTestBase{
         driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
         assertEquals(driver.getTitle(), "SysAid Help Desk Software");
         Log.info("Assert on the page is opened");
-        Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Cannot connect to a Wi-Fi network");
+        new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Cannot connect to a Wi-Fi network");
 
         driver.findElement(By.id("quick_name")).click();
         driver.findElement(By.id("title")).clear();
