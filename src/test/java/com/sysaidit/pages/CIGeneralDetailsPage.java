@@ -3,13 +3,11 @@ package com.sysaidit.pages;
 import com.sysaidit.LogLog4j;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Map;
@@ -78,7 +76,7 @@ public class CIGeneralDetailsPage extends Page {
 
     public CIGeneralDetailsPage fillGeneraldetails() {
 
-        new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Error message in Outlook/Excel/Word/Powerpoint");
+        //new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Error message in Outlook/Excel/Word/Powerpoint");
         setCategoryTextField();
         /*setSubCategoryTextField("2");
         setThirdCategoryTextField("3");

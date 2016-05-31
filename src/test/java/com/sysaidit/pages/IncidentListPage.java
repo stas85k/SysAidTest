@@ -460,7 +460,7 @@ public class IncidentListPage extends Page {
     @FindBy(xpath = "//*[@class='truncate'][contains(text(),'Incidents')]")
     WebElement IncidentsButton;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//div[@id='ListContentDivOld']/table/tbody/tr[1]/td/table/tbody/tr[1]/td/a")
     WebElement IconsAddNewIncedent;
 
 
@@ -475,6 +475,11 @@ public class IncidentListPage extends Page {
         return this;
     }
 
+
+    public IncidentListPage ClickIconsAddNewIncedent( ) {
+        clickElement(IconsAddNewIncedent);
+        return this;
+    }
 
 
     public void waitForServiceDeskDrop()   {

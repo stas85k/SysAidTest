@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
-public class CITest extends TestNgTestBase{
+public class CITest extends TestNgTestBase {
     private LoginPage loginPage;
     private MainPage mainPage;
     private CIGeneralDetailsPage ciGeneralDetailsPage;
@@ -44,21 +44,18 @@ public class CITest extends TestNgTestBase{
     }
 
     @BeforeMethod
-    public void setUp (){
+    public void setUp() {
         driver.get(baseUrl);
-        loginPage.fillLogin("qatest","gh8mlz");
+        loginPage.fillLogin("qatest", "gh8mlz");
         //mainPage.waitForService();
     }
 
     @Test
     public void testUntitled() throws Exception {
-        //driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
         driver.get("https://automationstas.qa.sysaidit.com/SREdit.jsp?id=0&fromId=IncidentsList&SR_Type=1&templateID=20");
         assertEquals(driver.getTitle(), "SysAid Help Desk Software");
-        Log.info("Assert on the page is opened");
-        new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Cannot connect to a Wi-Fi network");
-
         driver.findElement(By.id("quick_name")).click();
+        new Select(driver.findElement(By.id("quick_name"))).selectByVisibleText("Cannot connect to a Wi-Fi network");
         driver.findElement(By.id("title")).clear();
         driver.findElement(By.id("title")).sendKeys("DEFAULT");
         driver.findElement(By.id("desc")).clear();
@@ -71,22 +68,16 @@ public class CITest extends TestNgTestBase{
         acceptNextAlert = false;
         driver.findElement(By.xpath("//table[@id='Popup_Layout']/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[2]/span")).click();
         // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
-        for (int second = 0; ; second++) {
+        for (int second = 0;; second++) {
             if (second >= 60) fail("timeout");
-            try {
-                if (isElementPresent(By.xpath("//div[contains(@id,'requestUser')]/div/div/span"))) break;
-            } catch (Exception e) {
-            }
+            try { if (isElementPresent(By.xpath("//div[contains(@id,'requestUser')]/div/div/span"))) break; } catch (Exception e) {}
             Thread.sleep(1000);
         }
 
         driver.findElement(By.xpath("//div[contains(@id,'requestUser')]/div/div/span")).click();
-        for (int second = 0; ; second++) {
+        for (int second = 0;; second++) {
             if (second >= 60) fail("timeout");
-            try {
-                if (isElementPresent(By.xpath("//div[@id='addScroll_requestUser_CustomSelect']/ul/li[2]"))) break;
-            } catch (Exception e) {
-            }
+            try { if (isElementPresent(By.xpath("//div[@id='addScroll_requestUser_CustomSelect']/ul/li[2]"))) break; } catch (Exception e) {}
             Thread.sleep(1000);
         }
 
@@ -94,6 +85,8 @@ public class CITest extends TestNgTestBase{
         driver.findElement(By.xpath("//table[@id='ApplyBtn']/tbody/tr/td[2]/span")).click();
         driver.findElement(By.xpath("//table[@id='OKBtn']/tbody/tr/td[2]/span")).click();
     }
+
+
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {

@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestNgTestBase {
@@ -14,7 +15,7 @@ public class LoginTest extends TestNgTestBase {
   private IncidentListPage incidentListPage;
   private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
-  //@BeforeClass
+  @BeforeClass
   public void testInit() {
     driver.get(baseUrl);
     loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -23,7 +24,7 @@ public class LoginTest extends TestNgTestBase {
 
 
 
-  //@Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
+  @Test(dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
   public void loginNegative (String useranme, String pass) {
     Log.info("Logging in negative");
     loginPage.fillLogin(useranme,pass);
@@ -35,7 +36,7 @@ public class LoginTest extends TestNgTestBase {
   @Test
   public void loginPositive () {
     Log.info("fill Login with positive data");
-      loginPage.fillLogin("qatest", "gh8mlz");
+      loginPage.fillLogin("sysaid", "L9ec420k");
     //incidentListPage.waitForServiceDeskDrop();
     Assert.assertTrue(loginPage.verifyUserNameAfterLogin());
     Log.info("Assert on username passed");
